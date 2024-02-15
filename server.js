@@ -14,11 +14,11 @@ app.use('/api/bookings/' , require('./routes/bookingsRoute'));
 const path = require('path')
 
 
-    app.use('/' , express.static('client/build'))
+    app.use('/' , express.static('client/build/public'))
 
     app.get('*' , (req , res)=>{
 
-          res.sendFile(path.resolve(__dirname, 'client/build/index.html'));
+          res.sendFile(path.resolve(__dirname, 'client/build/public/index.html'));
 
     })
 
